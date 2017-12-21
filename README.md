@@ -7,7 +7,6 @@ __A simple C program that helps you lear kana.__
 Run `make` in the terminal.
 
 ```
-
     flashcard <data_file> <result_file>
         <datafile>          store kana and romaji
         <result_file>       store the kana that you can't recognize and 
