@@ -9,6 +9,13 @@
 int main(int argc, char *argv[])
 {
 
+    if (argc != 3)
+    {
+        puts("You must give a input file that contains database and a output file to store your test result (if there is).");
+        puts("For example:\n\tflashcard katekana.txt result.txt");
+        return -1;
+    }
+
     int n = linecount(argv[1]);
 
     printf("%d\n", n);
@@ -31,8 +38,13 @@ int main(int argc, char *argv[])
     {
         FILE *wrfile;
         wrfile = fopen(argv[2], "w");
+        if (wrfile == NULL)
+        {
+            printf("Error! Can't generate the file:\"%s\"", argv[2]);
+            return -1;
+        }
 
-        puts("Incorrect record:");
+        printf("Sorry, you need to spend more effort of these:");
 
         for (int i = 0; i < n; i++)
         {
