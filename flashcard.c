@@ -44,7 +44,7 @@ int main(int argc, char *argv[])
             return -1;
         }
 
-        printf("Sorry, you need to spend more effort of these:");
+        printf("Sorry, you need to spend more effort of these:\n");
 
         for (int i = 0; i < n; i++)
         {
