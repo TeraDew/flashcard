@@ -63,5 +63,7 @@ int main(int argc, char *argv[])
     else
         puts("Congratulations! All correct.");
 
+    DestroyWP(wplist);
+    free(randm);
     return 0;
 }

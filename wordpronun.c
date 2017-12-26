@@ -144,3 +144,16 @@ int StripEnter(char *s)
         return 1;
     }
 }
+
+void DestroyWP(ptr2wp wplist)
+{
+    int n = sizeof(wplist) / sizeof(wp);
+    int i;
+    for (i = 0; i < n; i++)
+    {
+        free(wplist[i]->pronunciation);
+        free(wplist[i]->word);
+        free(wplist[i]);
+    }
+    free(wplist);
+}

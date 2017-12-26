@@ -15,5 +15,6 @@ wp initialwp(char *s1word, char *s2pronun);
 ptr2wp initialwpList(char *filename);
 int *getrandom(int length);
 int StripEnter(char *s);
+void DestroyWP(ptr2wp);
 
 #endif /* _Wordpronun_H */
